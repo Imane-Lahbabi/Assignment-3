@@ -34,21 +34,21 @@ Out-of-vocabulary handling: words seen only once in training are replaced by `<u
 data.rar
    │ unrar-free
    ▼
-/home/claude/data/{darija-wiki,goud.ma,music-data,story-data,twitter,Youtube}
+/home/data/{darija-wiki,goud.ma,music-data,story-data,twitter,Youtube}
    │ 01_preprocess.py
    │  - script-detect each line (Arabic vs Latin)
    │  - NFKC; strip tatweel + Arabic diacritics; lower-case Latin
    │  - word tokenizer (keeps digits: '3lik','7aja','9lbi' stay as one token)
    │  - cap story-data / twitter at 25 MB; 96/2/2 split
    ▼
-/home/claude/processed/{ar,la}.{train,dev,test}.txt
+/home/processed/{ar,la}.{train,dev,test}.txt
    │ 02_train_eval.py  +  ngram_lm.py
    │  - unk_threshold = 1 (singletons -> <unk>)
    │  - modified-KN, orders 1, 2, 3
    │  - perplexity on dev + test
    │  - sampled generations from trigram
    ▼
-/home/claude/models/{ar,la}_{1,2,3}gram.pkl
+/home/models/{ar,la}_{1,2,3}gram.pkl
 ```
 
 ## 3. Results — perplexity on held-out test set
