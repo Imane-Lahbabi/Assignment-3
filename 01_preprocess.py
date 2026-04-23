@@ -26,8 +26,8 @@ from pathlib import Path
 
 random.seed(42)
 
-DATA_ROOT = Path("/home/claude/data")
-OUT_ROOT = Path("/home/claude/processed")
+DATA_ROOT = Path("/home/data")
+OUT_ROOT = Path("/home/processed")
 OUT_ROOT.mkdir(exist_ok=True)
 
 # Per-script source selection and per-source caps (in MB of raw text).
