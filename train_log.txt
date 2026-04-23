@@ -1,0 +1,90 @@
+
+============================================================
+  Arabic-script Darija  (ar)
+============================================================
+  train: 195,323 sentences / 3,503,148 tokens
+  dev  : 4,069 sentences / 78,474 tokens
+  test : 4,069 sentences / 69,239 tokens
+
+  --- training 1-gram model ---
+    fit time       : 3.0 s
+    vocabulary size: 139,901
+    # 1-gram types : 139,900
+    dev  perplexity: 4,672.09
+    test perplexity: 4,327.65   (eval 0.1s)
+    saved -> ar_1gram.pkl
+
+  --- training 2-gram model ---
+    fit time       : 10.4 s
+    vocabulary size: 139,901
+    # 2-gram types : 1,671,449
+    KN discounts   : D1=0.738, D2=1.150, D3+=1.441  (bigram order)
+    dev  perplexity: 794.57
+    test perplexity: 693.64   (eval 0.6s)
+    saved -> ar_2gram.pkl
+
+  --- training 3-gram model ---
+    fit time       : 23.8 s
+    vocabulary size: 139,901
+    # 3-gram types : 2,661,750
+    KN discounts   : D1=0.738, D2=1.150, D3+=1.441  (bigram order)
+                     D1=0.850, D2=1.176, D3+=1.325  (trigram order)
+    dev  perplexity: 470.14
+    test perplexity: 405.20   (eval 1.0s)
+    saved -> ar_3gram.pkl
+
+  --- sampled generations (trigram, KN) ---
+    [1] انا مالكي ياك لباس
+    [2] ياقوت تبسمات و قربات عندها
+    [3] مراد هههههه مانقدرش نحيد ليك يدك بغيت ولادنا الله اش هاد
+    [4] شافت فيه وهي مرخية بين يديه و ذماغه على صدرو و بصووت مسموع و شافت فيهم لقات رؤيا متكية كاشوف فالسقف وساهية
+    [5] أغيد تفركع بضحك
+
+============================================================
+  Latin-script Darija (Arabizi)  (la)
+============================================================
+  train: 124,006 sentences / 901,972 tokens
+  dev  : 2,583 sentences / 18,904 tokens
+  test : 2,583 sentences / 18,552 tokens
+
+  --- training 1-gram model ---
+    fit time       : 0.9 s
+    vocabulary size: 59,029
+    # 1-gram types : 59,028
+    dev  perplexity: 952.95
+    test perplexity: 904.20   (eval 0.0s)
+    saved -> la_1gram.pkl
+
+  --- training 2-gram model ---
+    fit time       : 2.3 s
+    vocabulary size: 59,029
+    # 2-gram types : 366,282
+    KN discounts   : D1=0.543, D2=1.644, D3+=1.733  (bigram order)
+    dev  perplexity: 146.45
+    test perplexity: 154.28   (eval 0.1s)
+    saved -> la_2gram.pkl
+
+  --- training 3-gram model ---
+    fit time       : 4.8 s
+    vocabulary size: 59,029
+    # 3-gram types : 537,283
+    KN discounts   : D1=0.543, D2=1.644, D3+=1.733  (bigram order)
+                     D1=0.640, D2=1.702, D3+=1.702  (trigram order)
+    dev  perplexity: 75.40
+    test perplexity: 77.34   (eval 0.2s)
+    saved -> la_3gram.pkl
+
+  --- sampled generations (trigram, KN) ---
+    [1] https t co
+    [2] hadi hiya lekhra ma gha n3elmek
+    [3] khawi lkhwa risquina
+    [4] la kayn chi mochkil hhhhhhhh
+    [5] zgelti train li dana
+
+
+============================================================
+  SUMMARY — test-set perplexity
+============================================================
+                                  unigram     bigram    trigram
+Arabic-script Darija              4,327.7      693.6      405.2
+Latin-script Darija (Arabizi)       904.2      154.3       77.3
