@@ -3,7 +3,7 @@ Example: load a trained model and use it to score / generate.
 """
 from ngram_lm import NGramLM
 
-m = NGramLM.load("/home/claude/models/la_3gram.pkl")
+m = NGramLM.load("/home/models/la_3gram.pkl")
 
 print("Vocabulary size:", m.V)
 print("# trigram types:", len(m.counts[3]))
