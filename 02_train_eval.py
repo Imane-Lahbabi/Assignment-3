@@ -10,8 +10,8 @@ from pathlib import Path
 from ngram_lm import NGramLM
 
 random.seed(42)
-PROC = Path("/home/claude/processed")
-MODELS = Path("/home/claude/models")
+PROC = Path("/home/processed")
+MODELS = Path("/home/models")
 MODELS.mkdir(exist_ok=True)
 
 
